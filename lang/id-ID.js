@@ -11,8 +11,10 @@ export default {
       home: 'Halaman Muka',
       contacts: 'Kontak',
       dashboard: 'Dashboard',
+      menu: 'Menu',
       blank: 'Halaman Kosong',
-      test: 'Halaman Uji'
+      test: 'Settings',
+      courses: 'Courses',
     },
 
     // setting header
@@ -49,7 +51,7 @@ export default {
 
     // setting footer
     footer: {
-        
+
     },
 
     // setting per-halaman
