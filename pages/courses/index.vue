@@ -9,7 +9,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="d-inline">Courses</h4>
+                            <h4 class="d-inline">Classes</h4>
                             <div class="card-header-action">
                                 <a href="#" class="btn btn-primary">View All</a>
                             </div>
@@ -20,6 +20,7 @@
                                     <div class="media-body">
                                         <div class="badge badge-pill badge-danger mb-1 float-right">{{ course.status }}</div>
                                         <h6 class="media-title"><a :href="course.link">{{ course.title }}</a></h6>
+                                        <div class="text-small text-muted">Kelas Berikutnya Dijadwalkan Pada: <span class="text-primary">{{ course.scheduledAt }}</span></div><br>
                                         <div class="text-small text-muted">{{ course.author }}<div class="bullet"></div> <span class="text-primary">Now</span></div>
                                     </div>
                                 </li>
@@ -43,6 +44,7 @@ export default {
                     link: '/courses/1',
                     author: 'Ghany',
                     postedTime: '',
+                    scheduledAt: 'Jumat, 3 Juni 2022',
                     status: 'Not Finished'
                 },
                 {
@@ -51,6 +53,7 @@ export default {
                     link: '/courses/2',
                     author: 'Fransiska',
                     postedTime: '',
+                    scheduledAt: 'Rabu, 4 Mei 2022',
                     status: 'Finished'
                 },
                 {
@@ -59,6 +62,7 @@ export default {
                     link: '/courses/3',
                     author: 'Yhido',
                     postedTime: '',
+                    scheduledAt: 'Jumat, 13 Mei 2022',
                     status: 'In Progress'
                 },
             ]

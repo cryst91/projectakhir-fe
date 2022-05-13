@@ -3,7 +3,7 @@
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
                 <!-- <a href="/">Stisla</a -->
-                <nuxt-link to="/">XYZ Classroom</nuxt-link>
+                <nuxt-link to="/">Ruang Belajar Shift</nuxt-link>
             </div>
             <div class="sidebar-brand sidebar-brand-sm">
                 <nuxt-link to="/">N-St</nuxt-link>

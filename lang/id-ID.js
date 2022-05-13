@@ -14,7 +14,8 @@ export default {
       menu: 'Menu',
       blank: 'Halaman Kosong',
       test: 'Settings',
-      courses: 'Courses',
+      courses: 'Kelas',
+      session: 'Sesi',
     },
 
     // setting header

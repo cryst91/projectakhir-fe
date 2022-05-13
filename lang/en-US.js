@@ -12,7 +12,9 @@ export default {
       contacts: 'Contacts',
       dashboard: 'Dashboard',
       blank: 'Blank',
-      test: 'Test Page'
+      test: 'Test Page',
+      courses: 'Kelas',
+      session: 'Sesi',
     },
 
     // setting header

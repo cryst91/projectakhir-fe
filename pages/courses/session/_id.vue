@@ -1,10 +1,18 @@
 <template>
     <section class="section">
         <div class="section-header">
-            <h1>{{ $t('pages.courses') }}</h1>
+            <h1>{{ $t('pages.session') }}</h1>
         </div>
 
         <div class="section-body">
+            <div class="row">
+                <div class="col-lg-9 col-md-12 col-sm-12 wise-iframe-wrapper mx-auto">
+                    <iframe src="https://www.youtube.com/embed/tyneiz9FRMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <a class="btn btn-primary" id="btn-absen" @click="absen">{{ attendanceButtonLabel }}</a>
+            </div>
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12 mx-auto">
                     <div class="card">
@@ -27,14 +35,18 @@
                 <div class="col-lg-9 col-md-12 col-sm-12 mx-auto">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="d-inline">List Sesi</h4>
+                            <h4 class="d-inline">Supporting Files</h4>
                         </div>
                         <div class="card-body">
                             <ul class="list-unstyled list-unstyled-border">
-                                <li class="media" v-for="(session, index) in sessionList" :key="index">
+                                <li class="media">
                                     <div class="media-body">
-                                        <h6><a :href="session.link">{{ session.title }}</a></h6>
-                                        <div class="text-small text-muted">{{ session.lecturer }}<div class="bullet"></div> <span class="text-primary">Dimulai Pada {{ session.startTime }}</span></div>
+                                        <h6>File A</h6>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="media-body">
+                                        <h6>File B</h6>
                                     </div>
                                 </li>
                             </ul>
@@ -47,35 +59,36 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
+
 export default {
     data() {
         return {
-            sessionList: [
+            isAttend: false,
+            attendanceButtonLabel: "",
+            courseList: [
                 {
                     title: "Test A",
                     description: "Test A Description",
-                    link: '/courses/1/session/1',
-                    lecturer: 'Ghany',
+                    link: '#',
+                    author: 'Ghany',
                     postedTime: '',
-                    startTime: 'Jumat, 3 Juni 2022',
                     status: 'Not Finished'
                 },
                 {
                     title: "Test B",
                     description: "Test B Description",
-                    link: '/courses/2/session/2',
-                    lecturer: 'Fransiska',
+                    link: '#',
+                    author: 'Fransiska',
                     postedTime: '',
-                    startTime: 'Jumat, 10 Juni 2022',
                     status: 'Finished'
                 },
                 {
                     title: "Test C",
                     description: "Test A Description",
-                    link: '/courses/3/session/3',
-                    lecturer: 'Yhido',
+                    link: '#',
+                    author: 'Yhido',
                     postedTime: '',
-                    startTime: 'Jumat, 17 Juni 2022',
                     status: 'In Progress'
                 },
             ]
@@ -85,10 +98,36 @@ export default {
     layout: 'dashboard',
     nuxtI18n: {
         paths: {
-            id: '/courses/:id',
-            en: '/courses/:id'
+            id: '/courses/:courseid/session/:sessionid',
+            en: '/courses/:courseid/session/:sessionid'
         }
     },
+    created() {
+        if (!this.isAttend) {
+            this.attendanceButtonLabel = "KLIK UNTUK ABSEN DI SINI!";
+        } else {
+            this.attendanceButtonLabel = "Kamu Sudah Melakukan Absen";
+        }
+    },
+    methods: {
+        absen() {
+            if  (!this.isAttend) {
+                Swal.fire(
+                    'Absen Sukses Dicatat',
+                    'Absensi kamu sudah sukses dicatat oleh sistem!',
+                    'success'
+                );
+                this.attendanceButtonLabel = "Kamu Sudah Melakukan Absen";
+                this.isAttend = true;
+            } else {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Absen Sudah Dicatat',
+                    text: 'Absensi kamu sudah dicatat oleh sistem!'   
+                });
+            }
+        }
+    }
 }
 </script>
 
@@ -108,6 +147,12 @@ export default {
     left: 0;
     width: 100%;
     height: 75%;
+}
+
+#btn-absen {
+    position: relative;
+    margin: auto;
+    margin-bottom: 1%;
 }
 </style>
 
