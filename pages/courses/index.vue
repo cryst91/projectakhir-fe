@@ -19,7 +19,7 @@
                                 <li class="media" v-for="(course, index) in courseList" :key="index">
                                     <div class="media-body">
                                         <div class="badge badge-pill badge-danger mb-1 float-right">{{ course.status }}</div>
-                                        <h6 class="media-title"><a :href="course.link">{{ course.title }}</a></h6>
+                                        <h6 class="media-title"><nuxt-link :to="course.link">{{ course.title }}</nuxt-link></h6>
                                         <div class="text-small text-muted">Kelas Berikutnya Dijadwalkan Pada: <span class="text-primary">{{ course.scheduledAt }}</span></div><br>
                                         <div class="text-small text-muted">{{ course.author }}<div class="bullet"></div> <span class="text-primary">Now</span></div>
                                     </div>

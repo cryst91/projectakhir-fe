@@ -9,6 +9,7 @@
                     <a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none" ><i class="fas fa-search"></i></a>
                 </li>
             </ul>
+            <!--
             <div class="search-element">
                 <input class="form-control" type="search" :placeholder="$t('header.search.placeholder')" aria-label="Search" data-width="250" />
                 <button class="btn" type="submit"> <i class="fas fa-search"></i> </button>
@@ -37,10 +38,12 @@
                     </div>
                 </div>
             </div>
+            -->
         </form>
         <ul class="navbar-nav navbar-right">
 
             <!-- Message -->
+            <!--
             <li class="dropdown dropdown-list-toggle">
                 <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep" ><i class="far fa-envelope"></i></a>
                 <div class="dropdown-menu dropdown-list dropdown-menu-right">
@@ -70,8 +73,10 @@
                     </div>
                 </div>
             </li>
+            -->
 
             <!-- Notifications -->
+            <!--
             <li class="dropdown dropdown-list-toggle">
                 <a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg" ><i class="far fa-bell"></i ></a>
                 <div class="dropdown-menu dropdown-list dropdown-menu-right">
@@ -115,8 +120,10 @@
                     </div>
                 </div>
             </li>
+            -->
 
             <!-- Language Changer -->
+            <!--
             <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg" ><i class="fas fa-cog"></i ></a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -125,6 +132,7 @@
                     <nuxt-link :to="switchLocalePath('en')" class="dropdown-item has-icon"><strong>EN</strong> English </nuxt-link>
                 </div>
             </li>
+            -->
 
             <!-- Profile Dropdown -->
             <li class="dropdown">

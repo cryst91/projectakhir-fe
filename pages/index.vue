@@ -8,8 +8,6 @@
 export default {
     middleware: 'isAuth',
     setup () {
-        
-
         return {}
     }
 }

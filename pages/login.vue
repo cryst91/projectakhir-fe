@@ -4,7 +4,7 @@
             <div class="container mt-5">
                 <div class="col-12 col-sm-8 offset-sm-2 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                     <div class="login-brand">
-                        <img src="~/assets/img/stisla-fill.svg" alt="Login Logo" width="100" class="shadow-light rounded-circle">
+                        <img src="~/static/icon.jpg" alt="Login Logo" width="100" class="shadow-light rounded-circle">
                     </div>
 
                     <div class="card card-primary">
@@ -54,7 +54,7 @@
                         Don't have an account? <nuxt-link to="/register">Create One</nuxt-link>
                     </div>
                     <div class="simple-footer">
-                        Copyright &copy; Nuxt-Stisla 2020
+                        Copyright &copy; Shift Academy 2022
                     </div>
                 </div>
             </div>

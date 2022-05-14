@@ -33,7 +33,7 @@
                             <ul class="list-unstyled list-unstyled-border">
                                 <li class="media" v-for="(session, index) in sessionList" :key="index">
                                     <div class="media-body">
-                                        <h6><a :href="session.link">{{ session.title }}</a></h6>
+                                        <h6><nuxt-link :to="session.link">{{ session.title }}</nuxt-link></h6>
                                         <div class="text-small text-muted">{{ session.lecturer }}<div class="bullet"></div> <span class="text-primary">Dimulai Pada {{ session.startTime }}</span></div>
                                     </div>
                                 </li>

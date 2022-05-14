@@ -106,7 +106,7 @@
                         Already have an account? <nuxt-link to="/login">Sign in Here</nuxt-link>
                     </div>
                     <div class="simple-footer">
-                        Copyright &copy; Nuxt-Stisla 2020
+                        Copyright &copy; Shift Academy 2022
                     </div>
                 </div>
             </div>
